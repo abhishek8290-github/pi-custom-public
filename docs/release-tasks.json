@@ -1,0 +1,159 @@
+{
+  "updated": "2026-10-05",
+  "repository": "https://github.com/abhishek8290-github/pi-custom",
+  "tasks": [
+    {
+      "id": "privacy-contacts",
+      "title": "Remove committed contacts and phone numbers",
+      "summary": "Move contact data to ignored local configuration, publish sanitized examples, and purge exposed values from Git history before changing repository visibility.",
+      "priority": "P0",
+      "category": "Privacy",
+      "status": "pending",
+      "evidence": ["tool-server/contacts.json", "skills/sender/contacts.json", "dotfiles/gitconfig", "dotfiles/gitconfig-personal"]
+    },
+    {
+      "id": "privacy-boundary",
+      "title": "Separate the public kit from private memory and work configuration",
+      "summary": "Keep personal routines, employer details, private project knowledge, local endpoints, and user-specific instructions outside the public package.",
+      "priority": "P0",
+      "category": "Privacy",
+      "status": "pending",
+      "evidence": ["memory/USER.md", "memory/topics/", "ThingsToDo.md", "config/machine-profile.json", "docs/personal-os-expenses-tool.md"]
+    },
+    {
+      "id": "license-provenance",
+      "title": "Choose a root license and finish the provenance audit",
+      "summary": "Add a repository-wide open-source license and verify that every vendored or adapted skill carries compatible attribution and licensing.",
+      "priority": "P0",
+      "category": "Legal",
+      "status": "pending",
+      "evidence": ["skills/*/LICENSE", "skills/*/UPSTREAM.md"]
+    },
+    {
+      "id": "history-scan",
+      "title": "Pass tracked-content and full-history safety scans",
+      "summary": "Scan the current tree and complete Git history for secrets, PII, internal URLs, work email addresses, and proprietary material.",
+      "priority": "P0",
+      "category": "Security",
+      "status": "pending",
+      "evidence": [".gitignore", "config/env-vars.example"]
+    },
+    {
+      "id": "public-docs",
+      "title": "Write the public project and contributor documentation",
+      "summary": "Add a root README, installation path, support matrix, configuration guide, security policy, contribution guide, and an explicit code-of-conduct decision.",
+      "priority": "P1",
+      "category": "Documentation",
+      "status": "pending",
+      "evidence": ["tool-server/README.md", "dotfiles/README.md"]
+    },
+    {
+      "id": "neutral-bootstrap",
+      "title": "Make bootstrap fork-neutral",
+      "summary": "Replace personal GitHub accounts, SSH aliases, names, and companion-repository assumptions with parameters and opt-in workstation configuration.",
+      "priority": "P1",
+      "category": "Installation",
+      "status": "pending",
+      "evidence": ["bootstrap-new-laptop.sh", "setup.sh"]
+    },
+    {
+      "id": "portability",
+      "title": "Define and enforce the portability boundary",
+      "summary": "Remove machine-specific paths and service assumptions from defaults, then document whether the supported baseline is macOS/Homebrew or broader.",
+      "priority": "P1",
+      "category": "Installation",
+      "status": "pending",
+      "evidence": ["config/machine-profile.json", "skills/local-dev-infra/REGISTRY.md", "skills/tmux-session-manager/SKILL.md"]
+    },
+    {
+      "id": "ci-release-gate",
+      "title": "Create one reproducible verification command and CI gate",
+      "summary": "Run shell checks, extension and Appcraft tests, Python tool-server tests, lockfile checks, provenance checks, and secret scanning from a fresh clone.",
+      "priority": "P1",
+      "category": "Quality",
+      "status": "pending",
+      "evidence": ["tests/", "tool-server/tests/", "package.json"]
+    },
+    {
+      "id": "package-metadata",
+      "title": "Complete package and release metadata",
+      "summary": "Add version, description, repository, homepage, issue tracker, license, engines, scripts, and a deliberate distribution policy.",
+      "priority": "P1",
+      "category": "Packaging",
+      "status": "pending",
+      "evidence": ["package.json"]
+    },
+    {
+      "id": "tool-security",
+      "title": "Harden the public tool-server boundary",
+      "summary": "Add authentication and capability scopes, separate read-only from side-effecting tools, restrict filesystem and command roots, keep enforced loopback binding, and default SQL redaction to a safe mode.",
+      "priority": "P1",
+      "category": "Security",
+      "status": "pending",
+      "evidence": ["tool-server/app/main.py", "tool-server/README.md", "tool-server/run.sh"]
+    },
+    {
+      "id": "skill-standard",
+      "title": "Define the public skill and extension contract",
+      "summary": "Validate metadata, dependencies, supported platforms, provenance, tests, and sanitized examples for every distributed capability.",
+      "priority": "P2",
+      "category": "Packaging",
+      "status": "pending",
+      "evidence": ["skills/", "extensions/"]
+    },
+    {
+      "id": "repository-hygiene",
+      "title": "Exclude generated artifacts and define release contents",
+      "summary": "Keep screenshots, browser state, temporary output, runtime data, and generated review material out of public releases.",
+      "priority": "P2",
+      "category": "Quality",
+      "status": "pending",
+      "evidence": [".gitignore", "skills/appcraft/.lavish/", "skills/appcraft/tmp/", "skills/docx-maker/templates/academic-reference.docx"]
+    },
+    {
+      "id": "dependency-policy",
+      "title": "Pin runtime dependencies and publish an update policy",
+      "summary": "Make Python and bootstrap installs reproducible and state supported Node, Python, Pi, and operating-system versions.",
+      "priority": "P2",
+      "category": "Packaging",
+      "status": "pending",
+      "evidence": ["tool-server/requirements.txt", "bootstrap-new-laptop.sh", "scripts/setup-workstation.sh"]
+    },
+    {
+      "id": "ignore-secrets",
+      "title": "Exclude common local secret files",
+      "summary": "Environment files, private keys, virtual environments, runtime data, and common build artifacts are ignored.",
+      "priority": "P1",
+      "category": "Security",
+      "status": "complete",
+      "evidence": [".gitignore", "config/env-vars.example"]
+    },
+    {
+      "id": "bootstrap-tests",
+      "title": "Test workstation setup and repair paths",
+      "summary": "Bootstrap verification covers profile setup, idempotency, links, and strict failure behavior.",
+      "priority": "P1",
+      "category": "Quality",
+      "status": "complete",
+      "evidence": ["tests/workstation-setup-test.sh", "tests/machine-doctor-test.sh"]
+    },
+    {
+      "id": "component-tests",
+      "title": "Maintain component-level test suites",
+      "summary": "Extensions, Appcraft, the tool server, and Personal Build Hub already have focused test coverage.",
+      "priority": "P2",
+      "category": "Quality",
+      "status": "complete",
+      "evidence": ["extensions/", "tests/appcraft/", "tool-server/tests/", "apps/personal-build-hub/tests/"]
+    },
+    {
+      "id": "loopback-server",
+      "title": "Bind the local tool server to loopback",
+      "summary": "The current runner binds to 127.0.0.1 and documents that the unauthenticated v0 server must not be exposed to a network.",
+      "priority": "P1",
+      "category": "Security",
+      "status": "complete",
+      "evidence": ["tool-server/run.sh", "tool-server/README.md"]
+    }
+  ]
+}
