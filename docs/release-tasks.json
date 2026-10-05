@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-05",
-  "repository": "https://github.com/abhishek8290-github/pi-custom",
+  "repository": "https://github.com/abhishek8290-github/pi-custom-public",
   "tasks": [
     {
       "id": "privacy-contacts",
@@ -9,7 +9,12 @@
       "priority": "P0",
       "category": "Privacy",
       "status": "pending",
-      "evidence": ["tool-server/contacts.json", "skills/sender/contacts.json", "dotfiles/gitconfig", "dotfiles/gitconfig-personal"]
+      "evidence": [
+        "tool-server/contacts.json",
+        "skills/sender/contacts.json",
+        "dotfiles/gitconfig",
+        "dotfiles/gitconfig-personal"
+      ]
     },
     {
       "id": "privacy-boundary",
@@ -18,7 +23,13 @@
       "priority": "P0",
       "category": "Privacy",
       "status": "pending",
-      "evidence": ["memory/USER.md", "memory/topics/", "ThingsToDo.md", "config/machine-profile.json", "docs/personal-os-expenses-tool.md"]
+      "evidence": [
+        "memory/USER.md",
+        "memory/topics/",
+        "ThingsToDo.md",
+        "config/machine-profile.json",
+        "docs/personal-os-expenses-tool.md"
+      ]
     },
     {
       "id": "license-provenance",
@@ -27,7 +38,10 @@
       "priority": "P0",
       "category": "Legal",
       "status": "pending",
-      "evidence": ["skills/*/LICENSE", "skills/*/UPSTREAM.md"]
+      "evidence": [
+        "skills/*/LICENSE",
+        "skills/*/UPSTREAM.md"
+      ]
     },
     {
       "id": "history-scan",
@@ -36,7 +50,10 @@
       "priority": "P0",
       "category": "Security",
       "status": "pending",
-      "evidence": [".gitignore", "config/env-vars.example"]
+      "evidence": [
+        ".gitignore",
+        "config/env-vars.example"
+      ]
     },
     {
       "id": "public-docs",
@@ -45,7 +62,10 @@
       "priority": "P1",
       "category": "Documentation",
       "status": "pending",
-      "evidence": ["tool-server/README.md", "dotfiles/README.md"]
+      "evidence": [
+        "tool-server/README.md",
+        "dotfiles/README.md"
+      ]
     },
     {
       "id": "neutral-bootstrap",
@@ -54,7 +74,10 @@
       "priority": "P1",
       "category": "Installation",
       "status": "pending",
-      "evidence": ["bootstrap-new-laptop.sh", "setup.sh"]
+      "evidence": [
+        "bootstrap-new-laptop.sh",
+        "setup.sh"
+      ]
     },
     {
       "id": "portability",
@@ -63,7 +86,11 @@
       "priority": "P1",
       "category": "Installation",
       "status": "pending",
-      "evidence": ["config/machine-profile.json", "skills/local-dev-infra/REGISTRY.md", "skills/tmux-session-manager/SKILL.md"]
+      "evidence": [
+        "config/machine-profile.json",
+        "skills/local-dev-infra/REGISTRY.md",
+        "skills/tmux-session-manager/SKILL.md"
+      ]
     },
     {
       "id": "ci-release-gate",
@@ -72,7 +99,11 @@
       "priority": "P1",
       "category": "Quality",
       "status": "pending",
-      "evidence": ["tests/", "tool-server/tests/", "package.json"]
+      "evidence": [
+        "tests/",
+        "tool-server/tests/",
+        "package.json"
+      ]
     },
     {
       "id": "package-metadata",
@@ -81,7 +112,9 @@
       "priority": "P1",
       "category": "Packaging",
       "status": "pending",
-      "evidence": ["package.json"]
+      "evidence": [
+        "package.json"
+      ]
     },
     {
       "id": "tool-security",
@@ -90,7 +123,11 @@
       "priority": "P1",
       "category": "Security",
       "status": "pending",
-      "evidence": ["tool-server/app/main.py", "tool-server/README.md", "tool-server/run.sh"]
+      "evidence": [
+        "tool-server/app/main.py",
+        "tool-server/README.md",
+        "tool-server/run.sh"
+      ]
     },
     {
       "id": "skill-standard",
@@ -99,7 +136,10 @@
       "priority": "P2",
       "category": "Packaging",
       "status": "pending",
-      "evidence": ["skills/", "extensions/"]
+      "evidence": [
+        "skills/",
+        "extensions/"
+      ]
     },
     {
       "id": "repository-hygiene",
@@ -108,7 +148,12 @@
       "priority": "P2",
       "category": "Quality",
       "status": "pending",
-      "evidence": [".gitignore", "skills/appcraft/.lavish/", "skills/appcraft/tmp/", "skills/docx-maker/templates/academic-reference.docx"]
+      "evidence": [
+        ".gitignore",
+        "skills/appcraft/.lavish/",
+        "skills/appcraft/tmp/",
+        "skills/docx-maker/templates/academic-reference.docx"
+      ]
     },
     {
       "id": "dependency-policy",
@@ -117,7 +162,11 @@
       "priority": "P2",
       "category": "Packaging",
       "status": "pending",
-      "evidence": ["tool-server/requirements.txt", "bootstrap-new-laptop.sh", "scripts/setup-workstation.sh"]
+      "evidence": [
+        "tool-server/requirements.txt",
+        "bootstrap-new-laptop.sh",
+        "scripts/setup-workstation.sh"
+      ]
     },
     {
       "id": "ignore-secrets",
@@ -126,7 +175,10 @@
       "priority": "P1",
       "category": "Security",
       "status": "complete",
-      "evidence": [".gitignore", "config/env-vars.example"]
+      "evidence": [
+        ".gitignore",
+        "config/env-vars.example"
+      ]
     },
     {
       "id": "bootstrap-tests",
@@ -135,7 +187,10 @@
       "priority": "P1",
       "category": "Quality",
       "status": "complete",
-      "evidence": ["tests/workstation-setup-test.sh", "tests/machine-doctor-test.sh"]
+      "evidence": [
+        "tests/workstation-setup-test.sh",
+        "tests/machine-doctor-test.sh"
+      ]
     },
     {
       "id": "component-tests",
@@ -144,7 +199,12 @@
       "priority": "P2",
       "category": "Quality",
       "status": "complete",
-      "evidence": ["extensions/", "tests/appcraft/", "tool-server/tests/", "apps/personal-build-hub/tests/"]
+      "evidence": [
+        "extensions/",
+        "tests/appcraft/",
+        "tool-server/tests/",
+        "apps/personal-build-hub/tests/"
+      ]
     },
     {
       "id": "loopback-server",
@@ -153,7 +213,10 @@
       "priority": "P1",
       "category": "Security",
       "status": "complete",
-      "evidence": ["tool-server/run.sh", "tool-server/README.md"]
+      "evidence": [
+        "tool-server/run.sh",
+        "tool-server/README.md"
+      ]
     }
   ]
 }
